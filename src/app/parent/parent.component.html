@@ -1,3 +1,19 @@
-<p>
-  parent works!
-</p>
+<div class="container">
+  <div>
+    <h3>Parent Component</h3>
+    <input type="text"class="form-control" value="{{sampleData}}" [(ngModel)]= "sampleData">
+  </div>
+  <div>
+    <!--childData handles output received and is the name of the output we want from the 
+    child component-->
+    <!--$event is a variable used to carry output data-->
+    <app-child
+    [parentData]="sampleData" 
+    
+
+    (childData)='handleEvent($event)'
+    >
+    
+    </app-child>
+  </div>
+</div>

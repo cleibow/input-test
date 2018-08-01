@@ -1,0 +1,16 @@
+<h3>Child Component</h3>
+<div>
+
+  <p>Data from parent view: {{incomingData}}</p>
+
+</div>
+<div>
+  <input type="text"
+  class="form-control"
+  value="{{childSampleData}}"
+  [(ngModel)]="childSampleData"
+  (ngModelChange)="sendData($event)"
+  placeholder="write some cool shit to send to the parent"
+  >
+</div>
+
